@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Brooke Porter
+xsadrithx@yahoo.com
+4/29/18
+
+Final_Porter_Brooke
+
+CS 17.11, Section 6991: Sean Kirkpatrick
+
+The UI for the game layout. Includes the image views for waves,
+and canvases for both boats and cthulhu, as well as labels for
+the wpm counter and quote text.
+-->
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.control.Label?>
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.srjc.porter.brooke.wpm.Controller"
+            stylesheets="@UiStyles.css">
+
+    <Pane prefHeight="720.0"
+          prefWidth="1280.0"
+          styleClass="pane-background">
+
+        <ImageView fitHeight="720.0"
+                   fitWidth="1280.0"
+                   preserveRatio="true"
+                   fx:id="backWave">
+            <Image url="@Images/backWave.png"/>
+        </ImageView>
+        <Canvas fx:id="npcCanvas" height="720.0" width="1280.0"/>
+        <ImageView fitHeight="720.0"
+                   fitWidth="1280.0"
+                   preserveRatio="true"
+                   fx:id="midWave">
+            <Image url="@Images/midWave.png"/>
+        </ImageView>
+        <Canvas fx:id="cthulhuCanvas" height="720.0" width="1280.0"/>
+        <Canvas fx:id="playerCanvas" height="720.0" width="1280.0"/>
+        <ImageView fitHeight="720.0"
+                   fitWidth="1280.0"
+                   preserveRatio="true"
+                   fx:id="frontWave">
+            <Image url="@Images/frontWave.png"/>
+        </ImageView>
+
+        <ImageView fitHeight="720.0"
+                   fitWidth="1280.0"
+                   preserveRatio="true">
+            <Image url="@Images/textBox.png"/>
+        </ImageView>
+
+        <Label layoutX="1075.0"
+               opacity="0.7"
+               fx:id="wpmLabel"/>
+
+        <TextFlow layoutY="660.0"
+                  layoutX="50.0"
+                  maxHeight="0">
+            <Label fx:id="label"/>
+        </TextFlow>
+        <Rectangle height="2.0"
+                   width="14.0"
+                   layoutX="48.0"
+                   layoutY="700.0"
+                   styleClass="cursor-rectangle"/>
+
+    </Pane>
+
+</AnchorPane>
