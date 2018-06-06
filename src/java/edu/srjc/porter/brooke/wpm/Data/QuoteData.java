@@ -31,7 +31,6 @@ class QuoteData
 
         try
         {
-//            connection = getConnection(String.format("jdbc:sqlite:%s", database));
             connection = getConnection(database);
             statement = connection.createStatement();
             statement.setQueryTimeout(30);
