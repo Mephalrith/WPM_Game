@@ -229,7 +229,7 @@ class Input
 
     private void clearState() throws IOException
     {
-        FXMLLoader initialLoader = new FXMLLoader(getClass().getResource("../UI/InitialLayout.fxml"));
+        FXMLLoader initialLoader = new FXMLLoader(getClass().getResource("/InitialLayout.fxml"));
         Parent root = initialLoader.load();
         this.start = initialLoader.getController();
         scene.setRoot(root);

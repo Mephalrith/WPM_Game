@@ -75,7 +75,7 @@ public class Start
 
     private void startGame(Double threshold) throws IOException
     {
-        FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("../UI/GameLayout.fxml"));
+        FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("/GameLayout.fxml"));
         Parent root = gameLoader.load();
         Controller controller = gameLoader.getController();
         scene.setRoot(root);

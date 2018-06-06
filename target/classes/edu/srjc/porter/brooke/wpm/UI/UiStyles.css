@@ -1,0 +1,34 @@
+/*
+Brooke Porter
+xsadrithx@yahoo.com
+4/29/18
+
+Final_Porter_Brooke
+
+CS 17.11, Section 6991: Sean Kirkpatrick
+
+A few styles for the text and background colors.
+*/
+
+* {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24pt;
+}
+
+.pane-background {
+    -fx-background-color: #283844;
+}
+
+.cursor-rectangle {
+    -fx-fill: #ffffff;
+}
+
+.pane-overlay {
+    -fx-background-color: #000000;
+    -fx-opacity: 0.3;
+}
+
+.label-text {
+    -fx-text-alignment: Center;
+    -fx-alignment: Center;
+}

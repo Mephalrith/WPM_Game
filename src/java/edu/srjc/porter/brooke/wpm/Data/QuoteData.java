@@ -22,7 +22,7 @@ import static java.sql.DriverManager.getConnection;
 
 class QuoteData
 {
-    private static final String database = "src/resources/quotes.sqlite";
+    private static final String database = "jdbc:sqlite::resource:quotes.sqlite";
 
     String getQuote(Integer num)
     {
@@ -31,7 +31,8 @@ class QuoteData
 
         try
         {
-            connection = getConnection(String.format("jdbc:sqlite:%s", database));
+//            connection = getConnection(String.format("jdbc:sqlite:%s", database));
+            connection = getConnection(database);
             statement = connection.createStatement();
             statement.setQueryTimeout(30);
 
